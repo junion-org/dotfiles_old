@@ -1,0 +1,21 @@
+" Vundle
+set nocompatible
+filetype off
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+
+" From Github
+Bundle 'Shougo/vimfiler'
+Bundle 'Shougo/neocomplcache'
+Bundle 'Shougo/unite.vim'
+Bundle 'nathanaelkane/vim-indent-guides'
+Bundle 'Lokaltog/vim-powerline'
+
+" From vim-scripts
+
+
+" Needed
+Bundle 'gmarik/vundle'
+
+filetype plugin indent on
+
