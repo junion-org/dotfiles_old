@@ -29,8 +29,25 @@ colorscheme molokai
 "colorscheme h2u_black
 "colorscheme wombat
 
-"yankしたときにクリップボードにコピーする
+" yankしたときにクリップボードにコピーする
 set clipboard=unnamed,autoselect
+
+" hoge.txt~のようなバックアップファイルの保存先
+set backupdir=~/.vim/backup
+" hoge.txt~のようなバックアップファイルを作成しない
+"set nobackup
+
+" .swpで表されるスワップファイルの保存先
+"set directory=~/
+" .swpで表されるスワップファイルを作成しない
+"set noswapfile
+
+" 新しくファイルを作成した時のテンプレート
+augroup templateload
+	autocmd!
+	autocmd BufNewFile *.py 0r ~/.vim/template/template.py
+	autocmd BufNewFile *.py %substitute#__DATE__#\=strftime('%Y-%m-%d %H:%M')#ge
+augroup end
 
 " カレントウィンドウにのみ罫線を引く
 "augroup cch

@@ -54,6 +54,7 @@ inoremap <expr><Right> pumvisible() ? neocomplcache#close_popup()."\<Right>" : "
 
 " Shell like behavior(not recommended).
 "set completeopt+=longest
+set completeopt-=preview
 "let g:neocomplcache_enable_auto_select = 1
 "let g:neocomplcache_disable_auto_complete = 1
 "inoremap <expr><TAB>  pumvisible() ? "\<Down>" : "\<TAB>"
