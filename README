@@ -1,4 +1,6 @@
 【インストール方法】
-$ git clone https://github.com/junion-org/dotfiles
+$ git clone http://github.com/junion-org/dotfiles
+$ cd dotfiles
 $ ./install.sh
 
+※vimを開いて，:BundleInstall!と打ち，プラグインもインストールしてください．
