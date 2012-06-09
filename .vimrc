@@ -45,7 +45,7 @@ set backupdir=~/.vim/backup
 "set nobackup
 
 " .swpで表されるスワップファイルの保存先
-"set directory=~/
+set directory=~/.vim/backup
 " .swpで表されるスワップファイルを作成しない
 "set noswapfile
 
