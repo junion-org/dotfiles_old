@@ -9,10 +9,17 @@ set number
 set ruler
 set tabstop=4
 
-" Python
+" python
+" Execute python script C-P 
+function! s:ExecPy()
+    exe "!" . &ft . " %"
+:endfunction
+command! Exec call <SID>ExecPy()
+autocmd FileType python map <silent> <C-P> :call <SID>ExecPy()<CR>
 autocmd FileType python setl autoindent
 autocmd FileType python setl smartindent cinwords=if,elif,else,for,while,try,except,finally,def,class
-autocmd FileType python setl tabstop=8 shiftwidth=5 softtabstop=4 expandtab smarttab
+autocmd FileType python setl tabstop=8 shiftwidth=4 softtabstop=4 expandtab smarttab
+autocmd FileType python :inoremap # X#
 
 " カーソル行をハイライト
 set cursorline
@@ -46,7 +53,7 @@ set backupdir=~/.vim/backup
 augroup templateload
 	autocmd!
 	autocmd BufNewFile *.py 0r ~/.vim/template/template.py
-	autocmd BufNewFile *.py %substitute#__DATE__#\=strftime('%Y-%m-%d %H:%M')#ge
+	autocmd BufNewFile *.py %substitute#__DATE__#\=strftime('%Y-%m-%d')#ge
 augroup end
 
 " カレントウィンドウにのみ罫線を引く
