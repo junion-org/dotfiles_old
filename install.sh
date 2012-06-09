@@ -8,3 +8,7 @@ mv ~/.vimrc* ~/dotfiles.old/
 ln -s ~/dotfiles/.vim ~/.vim
 ln -s ~/dotfiles/.vimrc ~/.vimrc
 
+# サブモジュールのインストール
+git submodule init
+git submodule update
+
