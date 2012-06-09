@@ -14,8 +14,8 @@ Bundle 'Lokaltog/vim-powerline'
 " From vim-scripts
 Bundle 'sudo.vim'
 
-" Needed
-Bundle 'gmarik/vundle'
+" サブモジュールで管理するので自身をvundle管理できない
+"Bundle 'gmarik/vundle'
 
 filetype plugin indent on
 
