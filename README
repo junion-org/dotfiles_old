@@ -4,3 +4,4 @@ $ cd dotfiles
 $ ./install.sh
 $ vi
 > :BundleInstall!
+以上でインストール完了！
