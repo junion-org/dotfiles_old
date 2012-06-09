@@ -12,7 +12,7 @@ Bundle 'nathanaelkane/vim-indent-guides'
 Bundle 'Lokaltog/vim-powerline'
 
 " From vim-scripts
-
+Bundle 'sudo.vim'
 
 " Needed
 Bundle 'gmarik/vundle'
