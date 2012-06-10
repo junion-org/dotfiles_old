@@ -6,8 +6,12 @@ source ~/dotfiles/.vimrc.keymap
 
 " 表示関連
 set number
+set cindent
+syntax on
 set ruler
+set backspace=2
 set tabstop=4
+set wildmode=longest,list
 
 " python
 " Execute python script C-P 
