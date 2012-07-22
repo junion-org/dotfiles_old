@@ -12,6 +12,7 @@ set ruler
 set backspace=2
 set tabstop=4
 set wildmode=longest,list
+set paste
 
 " python
 " Execute python script C-P 
