@@ -2,7 +2,7 @@
 source ~/dotfiles/.vimrc.vundle
 source ~/dotfiles/.vimrc.neocomplcache
 source ~/dotfiles/.vimrc.indent
-source ~/dotfiles/.vimrc.keymap
+source ~/dotfiles/.vimrc.unite
 
 " 表示関連
 set number
@@ -11,7 +11,11 @@ syntax on
 set ruler
 set backspace=2
 set tabstop=4
+set shiftwidth=4
+set softtabstop=4
 set wildmode=longest,list
+" □などの文字を全角1文字サイズで表示
+set ambiwidth=double
 
 " python
 " Execute python script C-P 
@@ -30,6 +34,9 @@ set cursorline
 set t_Co=256
 "hi CursorLine term=reverse cterm=none ctermbg=242
 "highlight CursorColumn term=reverse cterm=reverse
+
+" vim-powerline
+let g:Powerline_symbols='fancy'
 
 " 色
 "colorscheme rainbow_neon
@@ -51,7 +58,7 @@ set backupdir=~/.vim/backup
 " .swpで表されるスワップファイルの保存先
 set directory=~/.vim/backup
 " .swpで表されるスワップファイルを作成しない
-"set noswapfile
+set noswapfile
 
 " 新しくファイルを作成した時のテンプレート
 augroup templateload
@@ -69,3 +76,17 @@ augroup end
 "hi clear CursorLine
 "hi CursorLine gui=underline
 "highlight CursorLine ctermbg=black guibg=black
+
+" ******************************************************************************** 
+" キーマップ関連
+" ******************************************************************************** 
+" 表示行単位で上下移動する
+nnoremap j gj
+nnoremap k gk
+nnoremap <Down> gj
+nnoremap <Up>   gk
+vnoremap j gj
+vnoremap k gk
+vnoremap <Down> gj
+vnoremap <Up>   gk
+
