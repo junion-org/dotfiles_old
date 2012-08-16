@@ -37,6 +37,8 @@ set t_Co=256
 
 " vim-powerline
 let g:Powerline_symbols='fancy'
+set laststatus=2   " Always show the statusline
+set encoding=utf-8 " Necessary to show Unicode glyphs
 
 " 色
 "colorscheme rainbow_neon
@@ -48,7 +50,7 @@ colorscheme molokai
 "colorscheme wombat
 
 " yankしたときにクリップボードにコピーする
-set clipboard=unnamed,autoselect
+"set clipboard=unnamed,autoselect
 
 " hoge.txt~のようなバックアップファイルの保存先
 set backupdir=~/.vim/backup
