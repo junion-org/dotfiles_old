@@ -18,9 +18,9 @@ case ${UID} in
 			PROMPT="${CYAN}${HOST%%.*} ${PROMPT}"
 		;;
 	*)
-		PROMPT="%B${YELLOW}[%n@%m]%~%%${RESET}%b "
-		PROMPT2="%B${YELLOW}%_%%${RESET}%b "
-		SPROMPT="%B${YELLOW}%r is correct? [n,y,a,e]:${RESET}%b "
+		PROMPT="%B${WHITE}[%n@%m]%~%%${RESET}%b "
+		PROMPT2="%B${WHITE}%_%%${RESET}%b "
+		SPROMPT="%B${WHITE}%r is correct? [n,y,a,e]:${RESET}%b "
 		[ -n "${REMOTEHOST}${SSH_CONNECTION}" ] && 
 			PROMPT="${CYAN}${HOST%%.*} ${PROMPT}"
 		;;

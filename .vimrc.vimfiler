@@ -1,0 +1,6 @@
+" デフォルトのファイラーをnetrwから変更
+let g:vimfiler_as_default_explorer = 1
+
+" flでVimfilerを左ペイン固定で起動
+nnoremap <silent> fl :<C-u>VimFiler -buffer-name=explorer -split -winwidth=30 -toggle -no-quit<CR>
+

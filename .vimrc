@@ -3,6 +3,7 @@ source ~/dotfiles/.vimrc.vundle
 source ~/dotfiles/.vimrc.neocomplcache
 source ~/dotfiles/.vimrc.indent
 source ~/dotfiles/.vimrc.unite
+source ~/dotfiles/.vimrc.vimfiler
 
 " 表示関連
 set number
@@ -91,4 +92,16 @@ vnoremap j gj
 vnoremap k gk
 vnoremap <Down> gj
 vnoremap <Up>   gk
+
+" C-jをエスケープの代わりに使用する
+inoremap <C-j> <esc>
+vnoremap <C-j> <esc>
+
+" 括弧の自動補完をする
+inoremap { {}<LEFT>
+inoremap [ []<LEFT>
+inoremap ( ()<LEFT>
+inoremap < <><LEFT>
+inoremap " ""<LEFT>
+inoremap ' ''<LEFT>
 
