@@ -3,10 +3,14 @@
 "------------------------------------
 " 入力モードで開始する
 let g:unite_enable_start_insert=0
-" 縦分割で開く
-let g:unite_enable_split_vertically=1
-" 横幅40で開く
+" 縦分割で開く(0で水平)
+let g:unite_enable_split_vertically=0
+" 分割ルール
+let g:unite_split_rule="rightbelow"
+" 横幅40で開く(水平分割時は無視)
 let g:unite_winwidth=40
+" 縦幅80で開く(垂直分割時は無視)
+let g:unite_winheight=10
 " バッファ一覧
 nnoremap <silent> fb :<C-u>Unite buffer<CR>
 " ファイル一覧

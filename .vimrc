@@ -1,4 +1,4 @@
-" import
+" 外部ファイルの読み込み
 source ~/dotfiles/.vimrc.vundle
 source ~/dotfiles/.vimrc.neocomplcache
 source ~/dotfiles/.vimrc.indent
@@ -97,11 +97,11 @@ vnoremap <Up>   gk
 inoremap <C-j> <esc>
 vnoremap <C-j> <esc>
 
-" 括弧の自動補完をする
-inoremap { {}<LEFT>
-inoremap [ []<LEFT>
-inoremap ( ()<LEFT>
-inoremap < <><LEFT>
-inoremap " ""<LEFT>
-inoremap ' ''<LEFT>
+" 括弧の入力を完了したら括弧内に移動する
+inoremap {} {}<LEFT>
+inoremap [] []<LEFT>
+inoremap () ()<LEFT>
+inoremap <> <><LEFT>
+inoremap "" ""<LEFT>
+inoremap '' ''<LEFT>
 
