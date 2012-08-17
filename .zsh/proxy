@@ -1,3 +1,0 @@
-export http_proxy=http://proxy01.y.ecl.ntt.co.jp:8080
-export HTTPS_PROXY=https://proxy01.y.ecl.ntt.co.jp:8080
-export ftp_proxy=ftp://proxy01.y.ecl.ntt.co.jp:8080
