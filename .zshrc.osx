@@ -1,0 +1,25 @@
+# Mac OSX 専用のzsh設定
+
+# プロキシ
+[ -f $HOME/.zsh/proxy ] && source $HOME/.zsh/proxy
+
+# EDITOR
+export EDITOR='/Applications/MacVim.app/Contents/MacOS/Vim'
+
+# alias
+alias javac='javac -J-Dfile.encoding=utf-8'
+alias java='java -Dfile.encoding=utf=8'
+alias vim='env LANG=ja_JP.UTF-8 /Applications/MacVim.app/Contents/MacOS/Vim "$@"'
+alias vi='vim'
+alias ls='ls -FG'
+
+# PATH
+PATH=/usr/local/bin:$PATH
+PATH=/usr/local/mysql/bin:$PATH
+PATH=/usr/local/android-sdk-macosx/tools:$PATH
+export PATH
+
+# DYLD_LIBRARY_PATH
+DYLD_LIBRARY_PATH=/usr/local/mysql/lib:$DYLD_LIBRARY_PATH
+export DYLD_LIBRARY_PATH
+
