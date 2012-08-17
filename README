@@ -2,6 +2,6 @@
 $ git clone http://github.com/junion-org/dotfiles
 $ cd dotfiles
 $ ./install.sh
-$ vi
+$ vim
 > :BundleInstall!
 以上でインストール完了！
