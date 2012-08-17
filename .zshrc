@@ -19,12 +19,6 @@ esac
 autoload -U compinit
 compinit
 
-# Proxy                                                                                                                                    
-#proxy=proxy01.y.ecl.ntt.co.jp:8080
-#export http_proxy=http://$proxy
-#export HTTPS_PROXY=https://$proxy
-#export ftp_proxy=ftp://$proxy
-
 # User specific environment and startup programs
 PATH=$HOME/bin:$PATH
 PATH=/usr/local/bin:$PATH
