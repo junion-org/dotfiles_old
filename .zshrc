@@ -8,6 +8,24 @@
 [ -f $HOME/dotfiles/.zshrc.color ] && source $HOME/dotfiles/.zshrc.color
 [ -f $HOME/dotfiles/.zshrc.git ] && source $HOME/dotfiles/.zshrc.git
 
+# プロンプト設定
+case ${UID} in
+	0)
+		PROMPT="%B${RED}%/#${RESET}%b "
+		PROMPT2="%B${RED}%_#${RESET}%b "
+		SPROMPT="%B${RED}%r is correct? [n,y,a,e]:${RESET}%b "
+		[ -n "${REMOTEHOST}${SSH_CONNECTION}" ] && 
+			PROMPT="${CYAN}${HOST%%.*} ${PROMPT}"
+		;;
+	*)
+		PROMPT="%B${YELLOW}[%n@%m]%~%%${RESET}%b "
+		PROMPT2="%B${YELLOW}%_%%${RESET}%b "
+		SPROMPT="%B${YELLOW}%r is correct? [n,y,a,e]:${RESET}%b "
+		[ -n "${REMOTEHOST}${SSH_CONNECTION}" ] && 
+			PROMPT="${CYAN}${HOST%%.*} ${PROMPT}"
+		;;
+esac
+
 # zshの補完機能を有効にする
 autoload -U compinit
 compinit
@@ -67,7 +85,22 @@ setopt nolistbeep
 # 8 ビット目を通すようになり、日本語のファイル名を表示可能
 setopt print_eight_bit
 
+# ヒストリー
+HISTFILE=~/.zsh_history
+HISTSIZE=10000
+SAVEHIST=10000
 
+# 登録済コマンド行は古い方を削除
+setopt hist_ignore_all_dups
+
+# historyの共有
+setopt share_history
+
+# 余分な空白は詰める
+setopt hist_reduce_blanks
+
+# コマンド実行時にヒストリーに追加
+setopt inc_append_history
 
 # ********************
 # 　システム環境設定
