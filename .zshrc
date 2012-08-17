@@ -4,6 +4,10 @@
 # zsh環境設定
 # ********************
 
+# 外部ファイルの読み込み
+[ -f $HOME/dotfiles/.zshrc.color ] && source $HOME/dotfiles/.zshrc.color
+[ -f $HOME/dotfiles/.zshrc.git ] && source $HOME/dotfiles/.zshrc.git
+
 # zshの補完機能を有効にする
 autoload -U compinit
 compinit
@@ -60,8 +64,10 @@ setopt noautoremoveslash
 # beepを鳴らさないようにする
 setopt nolistbeep
 
-# 外部ファイルの読み込み
-[ -f $HOME/dotfiles/.zshrc.git ] && source $HOME/dotfiles/.zshrc.git
+# 8 ビット目を通すようになり、日本語のファイル名を表示可能
+setopt print_eight_bit
+
+
 
 # ********************
 # 　システム環境設定
