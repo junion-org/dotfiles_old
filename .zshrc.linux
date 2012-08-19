@@ -1,6 +1,7 @@
 # Linux 専用のzsh設定
 
 # alias
+alias ls='ls -F --color=auto'
 alias lla='ls -la'
 alias ll='ls -l'
 alias la='ls -a'
