@@ -1,16 +1,22 @@
 #!/bin/bash
 
-# 既存ファイルの削除
-rm -r ~/.vim
-rm ~/.vimrc
-rm -r ~/.zsh
-rm ~/.zshrc
-rm ~/.tmux.conf
+# dotfilesの列挙
+DOT_FILES=(
+.vim
+.vimrc
+.zsh
+.zshrc
+.tmux.conf
+)
 
-# シンボリックリンクをはる
-ln -s ~/dotfiles/.vim ~/.vim
-ln -s ~/dotfiles/.vimrc ~/.vimrc
-ln -s ~/dotfiles/.zsh ~/.zsh
-ln -s ~/dotfiles/.zshrc ~/.zshrc
-ln -s ~/dotfiles/.tmux.conf ~/.tmux.conf
+# ホームからdotfilesへのシンボリックリンク
+for file in ${DOT_FILES[@]}
+do
+	# 既存ファイルの削除
+	[ -f $HOME/$file ] && rm $HOME/$file
+	# 既存ディレクトリの削除
+	[ -d $HOME/$file ] && rm -r $HOME/$file
+	# シンボリックリンクをはる
+	ln -s $HOME/dotfiles/$file $HOME/$file
+done
 
