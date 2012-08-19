@@ -1,5 +1,10 @@
 # Linux 専用のzsh設定
 
+# alias
+alias lla='ls -la'
+alias ll='ls -l'
+alias la='ls -a'
+
 # PATH
 PATH=$HOME/bin:$PATH
 PATH=/usr/local/bin:$PATH
