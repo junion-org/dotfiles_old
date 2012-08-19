@@ -1,0 +1,10 @@
+[color]
+	ui = auto
+[core]
+	autocrlf = input
+	editor = vim
+[user]
+	name = junion
+	email = junion@junion.org
+[http]
+	sslverify = false

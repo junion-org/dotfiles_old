@@ -7,6 +7,7 @@ DOT_FILES=(
 .zsh
 .zshrc
 .tmux.conf
+.gitconfig
 )
 
 # ~/から~/dotfilesへのシンボリックリンク
