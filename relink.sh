@@ -9,7 +9,7 @@ DOT_FILES=(
 .tmux.conf
 )
 
-# ホームからdotfilesへのシンボリックリンク
+# ~/から~/dotfilesへのシンボリックリンク
 for file in ${DOT_FILES[@]}
 do
 	# 既存ファイルの削除

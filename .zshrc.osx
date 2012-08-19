@@ -15,6 +15,7 @@ alias ls='ls -FG'
 alias la='ls -la'
 
 # PATH
+PATH=$HOME/bin:$PATH
 PATH=/usr/local/bin:$PATH
 PATH=/usr/local/mysql/bin:$PATH
 PATH=/usr/local/android-sdk-macosx/tools:$PATH
@@ -23,4 +24,17 @@ export PATH
 # DYLD_LIBRARY_PATH
 DYLD_LIBRARY_PATH=/usr/local/mysql/lib:$DYLD_LIBRARY_PATH
 export DYLD_LIBRARY_PATH
+
+# ********************
+# システム環境設定
+# ********************
+# tmuxのクリップボード用関数
+function tmux(){
+	if [ -x $(which reattach-to-user-namespace 2>/dev/null) ]; then
+		tweaked_config=$(cat $HOME/.tmux.conf <(echo 'set-option -g default-command "reattach-to-user-namespace -l $SHELL"'))
+		command tmux "$@" -f <(echo "$tweaked_config")
+	else
+		command tmux "$@"
+	fi
+}
 

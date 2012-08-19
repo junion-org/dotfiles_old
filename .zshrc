@@ -103,7 +103,7 @@ setopt hist_reduce_blanks
 setopt inc_append_history
 
 # ********************
-# 　システム環境設定
+# システム環境設定
 # ********************
 
 # encoding

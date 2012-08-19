@@ -1,3 +1,8 @@
+【事前準備】
+・Vim, zsh, tmuxのインストール
+・reattach-to-user-namespaceのインストール
+	brew install reattach-to-user-namespace
+
 【インストール方法】
 $ git clone http://github.com/junion-org/dotfiles
 $ cd dotfiles
@@ -5,3 +10,4 @@ $ ./install.sh
 $ vim
 > :BundleInstall!
 以上でインストール完了！
+
