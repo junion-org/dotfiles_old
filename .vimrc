@@ -7,6 +7,7 @@ source ~/dotfiles/.vimrc.vim-indent-guides
 source ~/dotfiles/.vimrc.unite
 source ~/dotfiles/.vimrc.vimfiler
 source ~/dotfiles/.vimrc.vim-powerline
+source ~/dotfiles/.vimrc.vimshell
 
 " ********************************************************************************
 " 表示関連
@@ -86,6 +87,12 @@ augroup cch
     autocmd WinLeave * set nocursorline
     autocmd WinEnter,BufRead * set cursorline
 augroup END
+
+" 横分割したら新しいウィンドウは下に
+set splitbelow
+
+" 縦分割したら新しいウィンドウは右に
+set splitright
 
 " ******************************************************************************** 
 " 検索
