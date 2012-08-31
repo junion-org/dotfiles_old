@@ -34,7 +34,7 @@ export DYLD_LIBRARY_PATH
 function tmux(){
 	if [ -x $(which reattach-to-user-namespace 2>/dev/null) ]; then
 		tweaked_config=$(cat $HOME/.tmux.conf <(echo 'set-option -g default-command "reattach-to-user-namespace -l $SHELL"'))
-		command tmux "$@" -f <(echo "$tweaked_config")
+		command tmux -f <(echo "$tweaked_config") "$@"
 	else
 		command tmux "$@"
 	fi
