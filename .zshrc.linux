@@ -5,6 +5,7 @@ alias ls='ls -F --color=auto'
 alias lla='ls -la'
 alias ll='ls -l'
 alias la='ls -a'
+alias vi='vim'
 
 # PATH
 PATH=$HOME/bin:$PATH
