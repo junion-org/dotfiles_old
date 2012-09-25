@@ -6,6 +6,7 @@ alias lla='ls -la'
 alias ll='ls -l'
 alias la='ls -a'
 alias vi='vim'
+alias sudo='sudo -E '
 
 # PATH
 PATH=$HOME/bin:$PATH
