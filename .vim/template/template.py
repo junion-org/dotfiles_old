@@ -8,4 +8,3 @@ def main():
 # エントリポイント
 if __name__ == '__main__':
     main()
-
