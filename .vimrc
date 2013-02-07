@@ -205,6 +205,9 @@ function! s:ExecPy()
 command! Exec call <SID>ExecPy()
 autocmd FileType python map <silent> <C-P> :call <SID>ExecPy()<CR>
 
+" Arduino
+autocmd! BufNewFile,BufRead *.pde setlocal ft=arduino
+
 " ******************************************************************************** 
 " テンプレート
 " ******************************************************************************** 
