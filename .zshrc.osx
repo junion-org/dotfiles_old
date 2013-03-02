@@ -25,7 +25,6 @@ PATH=/usr/local/bin:$PATH
 PATH=/usr/local/mysql/bin:$PATH
 PATH=/Applications/android-sdk-macosx/tools:$PATH
 PATH=/Applications/android-sdk-macosx/platform-tools:$PATH
-#PATH=/usr/local/android-sdk-macosx/tools:$PATH
 export PATH
 
 # DYLD_LIBRARY_PATH
