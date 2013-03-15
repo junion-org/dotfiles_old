@@ -18,6 +18,7 @@ alias ls='ls -FG'
 alias lla='ls -la'
 alias ll='ls -l'
 alias la='ls -a'
+alias top='htop'
 
 # PATH
 PATH=$HOME/bin:$PATH
