@@ -8,12 +8,27 @@ alias la='ls -a'
 alias vi='vim'
 alias sudo='sudo -E '
 
+# PROXY
+PROXY=proxy01.y.ecl.ntt.co.jp:8080
+export http_proxy=$PROXY
+export https_proxy=$PROXY
+export ftp_proxy=$PROXY
+
 # PATH
-PATH=$HOME/bin:$PATH
+PATH=/nfs/local/bin:$PATH
+PATH=/usr/bin:$PATH
 PATH=/usr/local/bin:$PATH
-PATH=/usr/local/mysql/bin:$PATH
+PATH=$HOME/local/bin:$PATH
 export PATH
 
 # LD_LIBRARY_PATH
-# TODO:write here if you need
+LD_LIBRARY_PATH=/lib:$LD_LIBRARY_PATH
+LD_LIBRARY_PATH=/lib64:$LD_LIBRARY_PATH
+LD_LIBRARY_PATH=/usr/lib:$LD_LIBRARY_PATH
+LD_LIBRARY_PATH=/usr/lib64:$LD_LIBRARY_PATH
+LD_LIBRARY_PATH=/usr/local/lib:$LD_LIBRARY_PATH
+LD_LIBRARY_PATH=/usr/local/lib64:$LD_LIBRARY_PATH
+LD_LIBRARY_PATH=$HOME/local/lib:$LD_LIBRARY_PATH
+LD_LIBRARY_PATH=$HOME/local/lib64:$LD_LIBRARY_PATH
+export LD_LIBRARY_PATH
 
