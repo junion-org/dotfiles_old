@@ -55,7 +55,7 @@ if exists('&ambiwidth')
 endif
 
 " TABの代わりに空白を利用する
-"set expandtab
+set expandtab
 
 " TABが対応する空白の数（表示量）
 set tabstop=4
@@ -207,6 +207,23 @@ autocmd FileType python map <silent> <C-P> :call <SID>ExecPy()<CR>
 
 " Arduino
 autocmd! BufNewFile,BufRead *.pde,*.ino setlocal ft=arduino
+
+" Kobito
+function! s:open_kobito(...)
+    if a:0 == 0
+        call system('open -a Kobito '.expand('%:p'))
+    else
+        call system('open -a Kobito '.join(a:000, ' '))
+    endif
+endfunction
+
+" 引数のファイル(複数指定可)を Kobitoで開く
+" （引数無しのときはカレントバッファを開く
+command! -nargs=* Kobito call s:open_kobito(<f-args>)
+" Kobito を閉じる
+command! -nargs=0 KobitoClose call system("osascript -e 'tell application \"Kobito\" to quit'")
+" Kobito にフォーカスを移す
+command! -nargs=0 KobitoFocus call system("osascript -e 'tell application \"Kobito\" to activate'")
 
 " ******************************************************************************** 
 " テンプレート

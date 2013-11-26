@@ -12,3 +12,6 @@ let g:Powerline_symbols='fancy'
 " ステータスラインを常に表示する（0だとスプリットした時しか出ない）
 set laststatus=2
 
+" 矢印が文字化けしている場合は
+let g:Powerline_symbols = 'compatible'
+
