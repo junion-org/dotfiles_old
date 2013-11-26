@@ -225,6 +225,9 @@ command! -nargs=0 KobitoClose call system("osascript -e 'tell application \"Kobi
 " Kobito にフォーカスを移す
 command! -nargs=0 KobitoFocus call system("osascript -e 'tell application \"Kobito\" to activate'")
 
+" markdown
+autocmd! BufNewFile,BufRead *.md,*.mkd setlocal ft=mkd
+
 " ******************************************************************************** 
 " テンプレート
 " ******************************************************************************** 
