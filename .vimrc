@@ -5,7 +5,8 @@
 " ----------------------------------------------------------------------
 " 外部ファイルの読み込み
 " ----------------------------------------------------------------------
-source ~/dotfiles/.vimrc.vundle
+"source ~/dotfiles/.vimrc.vundle
+source ~/dotfiles/.vimrc.neobundle
 source ~/dotfiles/.vimrc.neocomplcache
 source ~/dotfiles/.vimrc.vim-indent-guides
 source ~/dotfiles/.vimrc.unite
