@@ -6,7 +6,7 @@ if has('vim_starting')
   set nocompatible
 
   " Required:
-  set runtimepath+=~/.vim/bundle/neobundle/
+  set runtimepath+=~/.vim/bundle/neobundle.vim/
 endif
 
 " Required:
@@ -18,10 +18,10 @@ NeoBundleFetch 'Shougo/neobundle.vim'
 
 " Github
 NeoBundle 'Shougo/unite.vim'
-NeoBundle 'Shougo/vimproc'
-NeoBundle 'Shougo/vimshell'
-NeoBundle 'Shougo/vimfiler'
-NeoBundle 'Shougo/neocomplcache'
+NeoBundle 'Shougo/vimproc.vim'
+NeoBundle 'Shougo/vimshell.vim'
+NeoBundle 'Shougo/vimfiler.vim'
+NeoBundle 'Shougo/neocomplete.vim'
 NeoBundle 'Shougo/neosnippet.vim'
 NeoBundle 'Shougo/neosnippet-snippets.vim'
 NeoBundle 'nathanaelkane/vim-indent-guides'
