@@ -27,7 +27,8 @@ Install bundles now?
 
 # vimprocのインストール
 # 使っているOSごとに必要なファイルをmakeする
-make -f ~/dotfiles/.vim/bundle/vimproc/make_mac.mak
+cd .vim/bundle/vimproc.vim/
+make -f make_mac.mak
 
 # カラースキームのインストール
 $ ./colors.sh
