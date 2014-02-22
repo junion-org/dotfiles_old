@@ -23,8 +23,11 @@ $ ./install.sh
 $ vim
 > :BundleInstall!
 
-# VimShellのインストール
+# vimprocのインストール
 # 使っているOSごとに必要なファイルをmakeする
 make -f ~/dotfiles/.vim/bundle/vimproc/make_mac.mak
+
+# カラースキームのインストール
+$ ./colors.sh
 ```
 
