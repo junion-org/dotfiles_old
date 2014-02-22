@@ -2,3 +2,4 @@
 .zsh/proxy
 .vim/backup/*
 .vim/bundle/*
+.vim/colors/*
