@@ -13,7 +13,7 @@ Installation
 
 ```bash
 # クローン
-$ git clone http://github.com/junion-org/dotfiles
+$ git clone https://github.com/junion-org/dotfiles.git
 
 # インストール
 $ cd dotfiles
