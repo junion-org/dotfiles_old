@@ -1,51 +1,45 @@
+# =============================================================================
 # Mac OSX 専用のzsh設定
+# =============================================================================
 
 # プロキシ
 [ -f $HOME/.zsh/proxy ] && source $HOME/.zsh/proxy
 
-# EDITOR
-#export EDITOR='/Applications/MacVim.app/Contents/MacOS/Vim'
-
 # Java
-export _JAVA_OPTIONS='-Dfile.encoding=UTF-8'
+#export _JAVA_OPTIONS='-Dfile.encoding=UTF-8'
 
 # alias
 #alias javac='javac -J-Dfile.encoding=utf-8'
 #alias java='java -Dfile.encoding=utf=8'
-#alias vim='env LANG=ja_JP.UTF-8 /Applications/MacVim.app/Contents/MacOS/Vim "$@"'
 alias vi='vim'
 alias ls='ls -FG'
-alias lla='ls -la'
-alias ll='ls -l'
 alias la='ls -a'
+alias ll='ls -l'
+alias lla='ls -la'
 alias top='htop'
 
 # PATH
 PATH=$HOME/bin:$PATH
 PATH=/usr/local/bin:$PATH
-PATH=/usr/local/mysql/bin:$PATH
-PATH=/Applications/android-sdk-macosx/tools:$PATH
-PATH=/Applications/android-sdk-macosx/platform-tools:$PATH
+#PATH=/Applications/android-sdk-macosx/tools:$PATH
+#PATH=/Applications/android-sdk-macosx/platform-tools:$PATH
 export PATH
 
 # DYLD_LIBRARY_PATH
-DYLD_LIBRARY_PATH=/usr/local/mysql/lib:$DYLD_LIBRARY_PATH
-export DYLD_LIBRARY_PATH
+#DYLD_LIBRARY_PATH=/usr/local/mysql/lib:$DYLD_LIBRARY_PATH
+#export DYLD_LIBRARY_PATH
 
 # virtualenv
 export WORKON_HOME=$HOME/.virtualenvs
 source /usr/local/bin/virtualenvwrapper.sh
 
-# ********************
-# システム環境設定
-# ********************
 # tmuxのクリップボード用関数
 function tmux(){
-	if [ -x $(which reattach-to-user-namespace 2>/dev/null) ]; then
-		tweaked_config=$(cat $HOME/.tmux.conf <(echo 'set-option -g default-command "reattach-to-user-namespace -l $SHELL"'))
-		command tmux -f <(echo "$tweaked_config") "$@"
-	else
-		command tmux "$@"
-	fi
+    if [ -x $(which reattach-to-user-namespace 2>/dev/null) ]; then
+        tweaked_config=$(cat $HOME/.tmux.conf <(echo 'set-option -g default-command "reattach-to-user-namespace -l $SHELL"'))
+        command tmux -f <(echo "$tweaked_config") "$@"
+    else
+        command tmux "$@"
+    fi
 }
 

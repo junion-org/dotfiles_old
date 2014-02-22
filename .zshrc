@@ -1,29 +1,31 @@
-# zshrc settings
+# =============================================================================
+# zsh設定
+# =============================================================================
 
-# ********************
+# ----------------------------------------------------------------------
 # zsh環境設定
-# ********************
+# ----------------------------------------------------------------------
 
 # 外部ファイルの読み込み
 [ -f $HOME/dotfiles/.zshrc.color ] && source $HOME/dotfiles/.zshrc.color
-[ -f $HOME/dotfiles/.zshrc.git ] && source $HOME/dotfiles/.zshrc.git
+[ -f $HOME/dotfiles/.zshrc.git ]   && source $HOME/dotfiles/.zshrc.git
 
 # プロンプト設定
 case ${UID} in
-	0)
-		PROMPT="%B${RED}%/#${RESET}%b "
-		PROMPT2="%B${RED}%_#${RESET}%b "
-		SPROMPT="%B${RED}Do you mean %r? [No(n),Yes(y),Abort(a),Edit(e)]:${RESET}%b "
-		[ -n "${REMOTEHOST}${SSH_CONNECTION}" ] && 
-			PROMPT="${CYAN}${HOST%%.*} ${PROMPT}"
-		;;
-	*)
-		PROMPT="%B${WHITE}[%n@%m]%~%%${RESET}%b "
-		PROMPT2="%B${WHITE}%_%%${RESET}%b "
-		SPROMPT="%B${WHITE}Do you mean ${RED}%r${WHITE}? [No(n),Yes(y),Abort(a),Edit(e)]:${RESET}%b "
-		[ -n "${REMOTEHOST}${SSH_CONNECTION}" ] && 
-			PROMPT="${CYAN}${HOST%%.*} ${PROMPT}"
-		;;
+    0)
+        PROMPT="%B${RED}%/#${RESET}%b "
+        PROMPT2="%B${RED}%_#${RESET}%b "
+        SPROMPT="%B${RED}Do you mean %r? [No(n),Yes(y),Abort(a),Edit(e)]:${RESET}%b "
+        [ -n "${REMOTEHOST}${SSH_CONNECTION}" ] &&
+            PROMPT="${CYAN}${HOST%%.*} ${PROMPT}"
+        ;;
+    *)
+        PROMPT="%B${WHITE}[%n@%m]%~%%${RESET}%b "
+        PROMPT2="%B${WHITE}%_%%${RESET}%b "
+        SPROMPT="%B${WHITE}Do you mean ${RED}%r${WHITE}? [No(n),Yes(y),Abort(a),Edit(e)]:${RESET}%b "
+        [ -n "${REMOTEHOST}${SSH_CONNECTION}" ] &&
+            PROMPT="${CYAN}${HOST%%.*} ${PROMPT}"
+        ;;
 esac
 
 # zshの補完機能を有効にする
@@ -34,10 +36,10 @@ compinit
 setopt auto_pushd
 
 # コマンドのスペルチェックをする
-setopt correct
+#setopt correct
 
 # コマンドライン全てのスペルチェックをする
-setopt correct_all
+#setopt correct_all
 
 # 上書きリダイレクトの禁止
 setopt no_clobber
@@ -102,9 +104,11 @@ setopt hist_reduce_blanks
 # コマンド実行時にヒストリーに追加
 setopt inc_append_history
 
-# ********************
+
+
+# ----------------------------------------------------------------------
 # システム環境設定
-# ********************
+# ----------------------------------------------------------------------
 
 # encoding
 export LANG=ja_JP.UTF-8
@@ -119,13 +123,13 @@ export LSCOLORS=gxfxcxdxbxegedabagacad
 
 # OSごとの設定ファイルを読み込む
 case `uname` in
-	Darwin )
-		# OSX
-		[ -f $HOME/dotfiles/.zshrc.osx ] && source $HOME/dotfiles/.zshrc.osx
-		;;
-	Linux )
-		# Linux
-		[ -f $HOME/dotfiles/.zshrc.linux ] && source $HOME/dotfiles/.zshrc.linux
-		;;
+    Darwin )
+        # OSX
+        [ -f $HOME/dotfiles/.zshrc.osx ] && source $HOME/dotfiles/.zshrc.osx
+        ;;
+    Linux )
+        # Linux
+        [ -f $HOME/dotfiles/.zshrc.linux ] && source $HOME/dotfiles/.zshrc.linux
+        ;;
 esac
 
