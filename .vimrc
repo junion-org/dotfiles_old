@@ -9,6 +9,7 @@
 source ~/dotfiles/.vimrc.neobundle
 "source ~/dotfiles/.vimrc.neocomplcache
 source ~/dotfiles/.vimrc.neocomplete
+source ~/dotfiles/.vimrc.neosnippet
 source ~/dotfiles/.vimrc.vim-indent-guides
 source ~/dotfiles/.vimrc.unite
 source ~/dotfiles/.vimrc.vimfiler
