@@ -19,9 +19,11 @@ $ git clone https://github.com/junion-org/dotfiles.git
 $ cd dotfiles
 $ ./install.sh
 
-# Vimプラグインのインストール
+# Vimプラグインのインストール（vim初回起動時にインストールするか聞かれる）
 $ vim
-> :BundleInstall!
+Not installed bundles:  [...]
+Install bundles now?
+(y)es, [N]o: y
 
 # vimprocのインストール
 # 使っているOSごとに必要なファイルをmakeする
