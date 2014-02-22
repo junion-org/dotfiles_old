@@ -4,7 +4,6 @@
 
 if has('vim_starting')
   set nocompatible
-
   " Required:
   set runtimepath+=~/.vim/bundle/neobundle.vim/
 endif
@@ -23,14 +22,13 @@ NeoBundle 'Shougo/vimshell.vim'
 NeoBundle 'Shougo/vimfiler.vim'
 NeoBundle 'Shougo/neocomplete.vim'
 NeoBundle 'Shougo/neosnippet.vim'
-NeoBundle 'Shougo/neosnippet-snippets.vim'
 NeoBundle 'nathanaelkane/vim-indent-guides'
 NeoBundle 'Lokaltog/vim-powerline'
 NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'flazz/vim-colorschemes'
 
 " vim-scripts
-Bundle 'sudo.vim'
+NeoBundle 'sudo.vim'
 
 " Required:
 filetype plugin indent on
