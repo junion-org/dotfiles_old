@@ -27,6 +27,7 @@ NeoBundle 'nathanaelkane/vim-indent-guides'
 NeoBundle 'Lokaltog/vim-powerline'
 NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'flazz/vim-colorschemes'
+NeoBundle 'ujihisa/unite-colorscheme'
 
 " vim.org
 NeoBundle 'sudo.vim'
