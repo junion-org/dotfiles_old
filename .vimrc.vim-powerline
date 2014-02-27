@@ -14,5 +14,5 @@ let g:Powerline_symbols='fancy'
 set laststatus=2
 
 " 矢印が文字化けしている場合は設定
-let g:Powerline_symbols = 'compatible'
+"let g:Powerline_symbols = 'compatible'
 
