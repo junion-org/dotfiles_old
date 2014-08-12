@@ -3,7 +3,7 @@
 # =============================================================================
 
 # プロキシ
-[ -f $HOME/.zsh/proxy ] && source $HOME/.zsh/proxy
+[ -f $HOME/.proxy ] && source $HOME/.proxy
 
 # Java
 #export _JAVA_OPTIONS='-Dfile.encoding=UTF-8'
