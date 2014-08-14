@@ -1,10 +1,13 @@
 #!/usr/bin/env python
-# coding: utf-8
+# -*- coding: utf-8 -*-
 
-# メイン関数
 def main():
+    """
+    main method
+    """
     pass
 
-# エントリポイント
+# entry point
 if __name__ == '__main__':
     main()
+
