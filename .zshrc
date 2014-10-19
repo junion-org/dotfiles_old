@@ -71,9 +71,6 @@ setopt auto_menu
 # sudoも補完の対象
 zstyle ':completion:*:sudo:*' command-path /usr/local/sbin /usr/local/bin /usr/sbin /usr/bin /sbin /bin
 
-# 色付きで補完する
-zstyle ':completion:*' list-colors di=34 fi=0
-#zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
 
 # 複数のリダイレクトやパイプなど、必要に応じて tee や cat の機能が使われる
 setopt multios
@@ -104,6 +101,12 @@ setopt hist_reduce_blanks
 # コマンド実行時にヒストリーに追加
 setopt inc_append_history
 
+# LSCOLORS
+export LSCOLORS=GxFxcxdxBxegedabagacad
+export LS_COLORS='di=36;1:ln=35;1:so=32:pi=33:ex=31;1:bd=46;34:cd=43;34:su=41;30:sg=46;30:tw=42;30:wo=43;30'
+
+# 色付きで補完する
+zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
 
 
 # ----------------------------------------------------------------------
@@ -117,9 +120,6 @@ export LESSCHARSET=utf-8
 # aliases
 alias em='emacs -nw'
 alias tmux='tmux -2'
-
-# LSCOLORS
-export LSCOLORS=gxfxcxdxbxegedabagacad
 
 # OSごとの設定ファイルを読み込む
 case `uname` in
