@@ -20,8 +20,9 @@ source ~/dotfiles/.vimrc.vimshell
 " 表示関連
 " ----------------------------------------------------------------------
 " カラースキーマ
+colorscheme junion
 "colorscheme rainbow_neon
-colorscheme molokai
+"colorscheme molokai
 "colorscheme robokai
 "colorscheme zenburn
 "colorscheme desert

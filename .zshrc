@@ -7,6 +7,7 @@
 # ----------------------------------------------------------------------
 
 # 外部ファイルの読み込み
+[ -f $HOME/.proxy ]                && source $HOME/.proxy
 [ -f $HOME/dotfiles/.zshrc.color ] && source $HOME/dotfiles/.zshrc.color
 [ -f $HOME/dotfiles/.zshrc.git ]   && source $HOME/dotfiles/.zshrc.git
 
@@ -70,7 +71,6 @@ setopt auto_menu
 
 # sudoも補完の対象
 zstyle ':completion:*:sudo:*' command-path /usr/local/sbin /usr/local/bin /usr/sbin /usr/bin /sbin /bin
-
 
 # 複数のリダイレクトやパイプなど、必要に応じて tee や cat の機能が使われる
 setopt multios

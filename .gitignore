@@ -3,3 +3,4 @@
 .vim/backup/*
 .vim/bundle/*
 .vim/colors/*
+!.vim/colors/junion.vim

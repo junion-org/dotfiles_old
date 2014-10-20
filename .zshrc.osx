@@ -2,9 +2,6 @@
 # Mac OSX 専用のzsh設定
 # =============================================================================
 
-# プロキシ
-[ -f $HOME/.proxy ] && source $HOME/.proxy
-
 # Java
 #export _JAVA_OPTIONS='-Dfile.encoding=UTF-8'
 
