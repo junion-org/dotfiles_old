@@ -10,12 +10,6 @@ alias lla='ls -la'
 alias vi='vim'
 alias sudo='sudo -E '
 
-# PROXY
-PROXY=proxy02.y.ecl.ntt.co.jp:8080
-export http_proxy=$PROXY
-export https_proxy=$PROXY
-export ftp_proxy=$PROXY
-
 # PATH
 PATH=/nfs/local/bin:$PATH
 PATH=/usr/bin:$PATH
