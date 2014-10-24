@@ -8,9 +8,10 @@ DOT_FILES=(
 .zshrc
 .tmux.conf
 .gitconfig
+.Xresources
 )
 
-# ~/から~/dotfilesへのシンボリックリンク
+# ~/dotfiles から ~/ へシンボリックリンク
 for file in ${DOT_FILES[@]}
 do
     # 既存ファイルの削除

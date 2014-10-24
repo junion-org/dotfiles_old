@@ -20,14 +20,16 @@ source ~/dotfiles/.vimrc.vimshell
 " 表示関連
 " ----------------------------------------------------------------------
 " カラースキーマ
-colorscheme junion
-"colorscheme rainbow_neon
+let g:hybrid_use_Xresources=1
+"let g:hybrid_use_iTerm_colors=1
+colorscheme hybrid
+"colorscheme jellybeans
+"colorscheme twilight256
+"colorscheme lucius
+"colorscheme railscasts
 "colorscheme molokai
-"colorscheme robokai
 "colorscheme zenburn
-"colorscheme desert
-"colorscheme h2u_black
-"colorscheme wombat
+"colorscheme junion
 
 " 構文ごとに色を変化
 syntax on
@@ -48,14 +50,14 @@ set showmatch
 set list
 
 " 不可視文字の表示形式
-set listchars=tab:>.,trail:_,extends:>,precedes:<
+set listchars=tab:▸\ ,trail:_,eol:↵,extends:»,precedes:«,nbsp:%
+
+" 全角スペースの表示
+highlight ZenkakuSpace ctermfg=237 cterm=underline
+match ZenkakuSpace /　/
 
 " 印字不可文字を16進数で表示
 set display=uhex
-
-" 全角スペースの表示
-highlight ZenkakuSpace cterm=underline ctermfg=lightblue guibg=darkgray
-match ZenkakuSpace /　/
 
 " □などの文字を全角1文字サイズで表示
 if exists('&ambiwidth')
@@ -101,6 +103,9 @@ set splitbelow
 
 " 縦分割したら新しいウィンドウは右に
 set splitright
+
+" 折り返しをしない
+set nowrap
 
 " ----------------------------------------------------------------------
 " 検索
@@ -210,11 +215,11 @@ autocmd FileType python setl tabstop=8 shiftwidth=4 softtabstop=4 expandtab smar
 autocmd FileType python :inoremap # X#
 
 " Execute python script C-P 
-function! s:ExecPy()
-    exe "!" . &ft . " %"
-:endfunction
-command! Exec call <SID>ExecPy()
-autocmd FileType python map <silent> <C-P> :call <SID>ExecPy()<CR>
+"function! s:ExecPy()
+"    exe "!" . &ft . " %"
+":endfunction
+"command! Exec call <SID>ExecPy()
+"autocmd FileType python map <silent> <C-P> :call <SID>ExecPy()<CR>
 
 " Arduino
 autocmd! BufNewFile,BufRead *.pde,*.ino setlocal ft=arduino
@@ -249,3 +254,41 @@ augroup templateload
     autocmd BufNewFile *.py %substitute#__DATE__#\=strftime('%Y-%m-%d')#ge
 augroup end
 
+" カラースキーム用
+function! s:get_syn_id(transparent)
+    let synid = synID(line("."), col("."), 1)
+    if a:transparent
+        return synIDtrans(synid)
+    else
+        return synid
+    endif
+endfunction
+function! s:get_syn_attr(synid)
+    let name = synIDattr(a:synid, "name")
+    let ctermfg = synIDattr(a:synid, "fg", "cterm")
+    let ctermbg = synIDattr(a:synid, "bg", "cterm")
+    let guifg = synIDattr(a:synid, "fg", "gui")
+    let guibg = synIDattr(a:synid, "bg", "gui")
+    return {
+        \ "name": name,
+        \ "ctermfg": ctermfg,
+        \ "ctermbg": ctermbg,
+        \ "guifg": guifg,
+        \ "guibg": guibg}
+endfunction
+function! s:get_syn_info()
+    let baseSyn = s:get_syn_attr(s:get_syn_id(0))
+    echo "name: " . baseSyn.name .
+        \ " ctermfg: " . baseSyn.ctermfg .
+        \ " ctermbg: " . baseSyn.ctermbg .
+        \ " guifg: " . baseSyn.guifg .
+        \ " guibg: " . baseSyn.guibg
+    let linkedSyn = s:get_syn_attr(s:get_syn_id(1))
+    echo "link to"
+    echo "name: " . linkedSyn.name .
+        \ " ctermfg: " . linkedSyn.ctermfg .
+        \ " ctermbg: " . linkedSyn.ctermbg .
+        \ " guifg: " . linkedSyn.guifg .
+        \ " guibg: " . linkedSyn.guibg
+endfunction
+command! SI call s:get_syn_info()
