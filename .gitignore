@@ -1,6 +1,6 @@
 # 無視するファイル
 .zsh/proxy
-.vim/backup/*
+#.vim/backup/*
 .vim/bundle/*
 .vim/colors/*
 !.vim/colors/junion.vim
