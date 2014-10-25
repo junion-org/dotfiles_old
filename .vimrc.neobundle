@@ -8,6 +8,7 @@ if has('vim_starting')
     set runtimepath+=~/.vim/bundle/neobundle.vim/
 endif
 call neobundle#rc(expand('~/.vim/bundle/'))
+"call neobundle#begin(expand('~/.vim/bundle/'))
 
 " Let NeoBundle manage NeoBundle
 NeoBundleFetch 'Shougo/neobundle.vim'
@@ -36,6 +37,7 @@ NeoBundle 'php.vim'
 NeoBundle 'python.vim'
 
 " NeoBundle required settings
+"call neobundle#end()
 filetype plugin indent on
 
 " If there are uninstalled bundles found on startup,

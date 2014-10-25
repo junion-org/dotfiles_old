@@ -12,9 +12,9 @@ Installation
 
 ```bash
 # dotfilesをクローン
-$ cd ~
 $ git clone https://github.com/junion-org/dotfiles.git
 
 # install.shを起動
-$ dotfiles/install.sh
+$ cd dotfiles
+$ ./install.sh
 ```

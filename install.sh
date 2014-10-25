@@ -3,9 +3,8 @@
 # 既存dotfilesの削除とシンボリックリンク
 [ -f $HOME/dotfiles/relink.sh ] && source $HOME/dotfiles/relink.sh
 
-# サブモジュールのインストール
-git submodule init
-git submodule update
+# NeoBundleのクローン
+git clone https://github.com/Shougo/neobundle.vim ~/.vim/bundle/neobundle.vim
 
 # vimの起動
 vim -c NeoBundleInstall!
