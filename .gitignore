@@ -1,4 +1,3 @@
-# 無視するファイル
 .zsh/proxy
 .vim/backup/*
 .vim/bundle/*

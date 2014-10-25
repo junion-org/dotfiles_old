@@ -1,0 +1,15 @@
+" =============================================================================
+" indentLine
+" =============================================================================
+
+" ターミナル色
+let g:indentLine_color_term = 7
+
+" GUI色
+"let g:indentLine_color_gui = '#5d646d'
+
+" ライン
+"let g:indentLine_char = '︙'
+"let g:indentLine_char = '¦'
+let g:indentLine_char = '┆'
+"let g:indentLine_char = '│'

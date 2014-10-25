@@ -1,5 +1,5 @@
 # =============================================================================
-# Linux 専用のzsh設定
+# .zshrc for Linux
 # =============================================================================
 
 # alias
@@ -8,7 +8,6 @@ alias la='ls -a'
 alias ll='ls -l'
 alias lla='ls -la'
 alias vi='vim'
-alias sudo='sudo -E '
 
 # PATH
 PATH=/nfs/local/bin:$PATH

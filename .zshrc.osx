@@ -1,5 +1,5 @@
 # =============================================================================
-# Mac OSX 専用のzsh設定
+# .zshrc for Mac OSX
 # =============================================================================
 
 # Java
@@ -29,14 +29,4 @@ export PATH
 # virtualenv
 export WORKON_HOME=$HOME/.virtualenvs
 source /usr/local/bin/virtualenvwrapper.sh
-
-# tmuxのクリップボード用関数
-function tmux(){
-    if [ -x $(which reattach-to-user-namespace 2>/dev/null) ]; then
-        tweaked_config=$(cat $HOME/.tmux.conf <(echo 'set-option -g default-command "reattach-to-user-namespace -l $SHELL"'))
-        command tmux -f <(echo "$tweaked_config") "$@"
-    else
-        command tmux "$@"
-    fi
-}
 

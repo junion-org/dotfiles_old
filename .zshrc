@@ -16,14 +16,14 @@ case ${UID} in
     0)
         PROMPT="%B${RED}%/#${RESET}%b "
         PROMPT2="%B${RED}%_#${RESET}%b "
-        SPROMPT="%B${RED}Do you mean %r? [No(n),Yes(y),Abort(a),Edit(e)]:${RESET}%b "
+#        SPROMPT="%B${RED}Do you mean %r? [No(n),Yes(y),Abort(a),Edit(e)]:${RESET}%b "
         [ -n "${REMOTEHOST}${SSH_CONNECTION}" ] &&
             PROMPT="${CYAN}${HOST%%.*} ${PROMPT}"
         ;;
     *)
         PROMPT="%B${WHITE}[%n@%m]%~%%${RESET}%b "
         PROMPT2="%B${WHITE}%_%%${RESET}%b "
-        SPROMPT="%B${WHITE}Do you mean ${RED}%r${WHITE}? [No(n),Yes(y),Abort(a),Edit(e)]:${RESET}%b "
+#        SPROMPT="%B${WHITE}Do you mean ${RED}%r${WHITE}? [No(n),Yes(y),Abort(a),Edit(e)]:${RESET}%b "
         [ -n "${REMOTEHOST}${SSH_CONNECTION}" ] &&
             PROMPT="${CYAN}${HOST%%.*} ${PROMPT}"
         ;;
