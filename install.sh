@@ -8,7 +8,7 @@ git submodule init
 git submodule update
 
 # vimの起動
-vim
+vim -c NeoBundleInstall!
 
 # vimprocのインストール
 cd .vim/bundle/vimproc.vim

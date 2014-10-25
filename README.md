@@ -3,19 +3,18 @@ dotfiles
 
 Installation
 ------------
-**事前準備**
-- vim
+**必要環境**
+- vim (lua enabled)
 - zsh
-- tmux（サーバの場合）
-- reattach-to-user-namespace（Macの場合）
+- tmux (for remote server)
 
-**dotfilesのインストール**
+**インストール方法**
 
 ```bash
 # dotfilesをクローン
+$ cd ~
 $ git clone https://github.com/junion-org/dotfiles.git
 
-# インストール
-$ cd dotfiles
-$ ./install.sh
+# install.shを起動
+$ dotfiles/install.sh
 ```

@@ -117,10 +117,6 @@ zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
 export LANG=ja_JP.UTF-8
 export LESSCHARSET=utf-8
 
-# aliases
-alias em='emacs -nw'
-alias tmux='tmux -2'
-
 # OSごとの設定ファイルを読み込む
 case `uname` in
     Darwin )
