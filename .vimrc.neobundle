@@ -1,18 +1,15 @@
 " =============================================================================
-" neobundle
+" NeoBundle
 " =============================================================================
 
+" NeoBundle required settings
 if has('vim_starting')
-  set nocompatible
-  " Required:
-  set runtimepath+=~/.vim/bundle/neobundle.vim/
+    set nocompatible
+    set runtimepath+=~/.vim/bundle/neobundle.vim/
 endif
-
-" Required:
 call neobundle#rc(expand('~/.vim/bundle/'))
 
 " Let NeoBundle manage NeoBundle
-" Required:
 NeoBundleFetch 'Shougo/neobundle.vim'
 
 " github.com
@@ -24,7 +21,8 @@ NeoBundle 'Shougo/neocomplete.vim'
 NeoBundle 'Shougo/neosnippet.vim'
 NeoBundle 'Shougo/neosnippet-snippets'
 NeoBundle 'nathanaelkane/vim-indent-guides'
-NeoBundle 'Lokaltog/vim-powerline'
+"NeoBundle 'Lokaltog/vim-powerline'
+NeoBundle 'itchyny/lightline.vim'
 NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'flazz/vim-colorschemes'
 NeoBundle 'ujihisa/unite-colorscheme'
@@ -37,7 +35,7 @@ NeoBundle 'django.vim'
 NeoBundle 'php.vim'
 NeoBundle 'python.vim'
 
-" Required:
+" NeoBundle required settings
 filetype plugin indent on
 
 " If there are uninstalled bundles found on startup,

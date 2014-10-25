@@ -128,14 +128,7 @@ set hlsearch
 " ----------------------------------------------------------------------
 " システム
 " ----------------------------------------------------------------------
-" yankしたときにクリップボードにコピーする
-" (TMUXが起動しているときはOSのクリップボードは使えない)
-"if $TMUX == ''
-"    set clipboard=unnamed,autoselect
-"endif
-" reattach-to-user-namespace
-" http://robots.thoughtbot.com/post/19398560514/how-to-copy-and-paste-with-tmux-on-mac-os-x
-" これを入れるとtmux上でもyankとコピーの連携ができる
+" ヤンクとハイライトをクリップボードにコピー
 set clipboard=unnamed,autoselect
 
 " 他で書き換えられたら自動で読み直し
