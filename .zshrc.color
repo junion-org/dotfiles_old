@@ -8,18 +8,30 @@ colors
 
 # Color定義
 DEFAULT=$'%{\e[0;0m%}'
-RESET="%{${reset_color}%}"
+RESET="%{$reset_color%}"
+# 0
+BLACK="%{$fg[black]%}"
+BOLD_BLACK="%{$fg_bold[black]%}"
+# 1
+RED="%{$fg[red]%}"
+BRIGHT_RED="%{$fg_no_bold[red]%}"
+BOLD_RED="%{$fg_bold[red]%}"
+# 2
 GREEN="%{${fg[green]}%}"
 BOLD_GREEN="%{${fg_bold[green]}%}"
-BLUE="%{${fg[blue]}%}"
-BOLD_BLUE="%{${fg_bold[blue]}%}"
-RED="%{${fg[red]}%}"
-BOLD_RED="%{${fg_bold[red]}%}"
-CYAN="%{${fg[cyan]}%}"
-BOLD_CYAN="%{${fg_bold[cyan]}%}"
+# 3
 YELLOW="%{${fg[yellow]}%}"
 BOLD_YELLOW="%{${fg_bold[yellow]}%}"
+# 4
+BLUE="%{${fg[blue]}%}"
+BOLD_BLUE="%{${fg_bold[blue]}%}"
+# 5
 MAGENTA="%{${fg[magenta]}%}"
 BOLD_MAGENTA="%{${fg_bold[magenta]}%}"
+# 6
+CYAN="%{${fg[cyan]}%}"
+BOLD_CYAN="%{${fg_bold[cyan]}%}"
+# 7
 WHITE="%{${fg[white]}%}"
+BOLD_CYAN="%{${fg_bold[white]}%}"
 

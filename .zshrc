@@ -13,19 +13,23 @@
 
 # プロンプト設定
 case ${UID} in
+    # root user
     0)
-        PROMPT="%B${RED}%/#${RESET}%b "
-        PROMPT2="%B${RED}%_#${RESET}%b "
-#        SPROMPT="%B${RED}Do you mean %r? [No(n),Yes(y),Abort(a),Edit(e)]:${RESET}%b "
+        PROMPT="${WHITE}[${RESET}${BOLD_RED}%n${RESET}${RED}@${RESET}%m %B%~%b${WHITE}]%#${RESET} "
+        PROMPT2="%B${WHITE}%_%#${RESET}%b "
+        #SPROMPT="%B${RED}Do you mean %r? [No(n),Yes(y),Abort(a),Edit(e)]:${RESET}%b "
+        # SSH
         [ -n "${REMOTEHOST}${SSH_CONNECTION}" ] &&
-            PROMPT="${CYAN}${HOST%%.*} ${PROMPT}"
+            PROMPT="${WHITE}[${RESET}${BOLD_RED}%n${RESET}${RED}@${CYAN}%m${RESET} %B%~%b${WHITE}]%#${RESET} "
         ;;
+    # general users
     *)
-        PROMPT="%B${WHITE}[%n@%m]%~%%${RESET}%b "
-        PROMPT2="%B${WHITE}%_%%${RESET}%b "
-#        SPROMPT="%B${WHITE}Do you mean ${RED}%r${WHITE}? [No(n),Yes(y),Abort(a),Edit(e)]:${RESET}%b "
+        PROMPT="${WHITE}[${RESET}${BOLD_WHITE}%n${RED}@${RESET}%m %B%~%b${WHITE}]%#${RESET} "
+        PROMPT2="%B${WHITE}%_%#${RESET}%b "
+        #SPROMPT="%B${WHITE}Do you mean ${RED}%r${WHITE}? [No(n),Yes(y),Abort(a),Edit(e)]:${RESET}%b "
+        # SSH
         [ -n "${REMOTEHOST}${SSH_CONNECTION}" ] &&
-            PROMPT="${CYAN}${HOST%%.*} ${PROMPT}"
+            PROMPT="${WHITE}[${RESET}${BOLD_WHITE}%n${RED}@${CYAN}%m${RESET} %B%~%b${WHITE}]%#${RESET} "
         ;;
 esac
 

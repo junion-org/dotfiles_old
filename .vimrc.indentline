@@ -11,5 +11,5 @@ let g:indentLine_color_term = 7
 " ライン
 "let g:indentLine_char = '︙'
 "let g:indentLine_char = '¦'
-let g:indentLine_char = '┆'
+"let g:indentLine_char = '┆'
 "let g:indentLine_char = '│'
