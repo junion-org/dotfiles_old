@@ -10,12 +10,11 @@ colors
 DEFAULT=$'%{\e[0;0m%}'
 RESET="%{$reset_color%}"
 # 0
-BLACK="%{$fg[black]%}"
-BOLD_BLACK="%{$fg_bold[black]%}"
+BLACK="%{${fg[black]}%}"
+BOLD_BLACK="%{${fg_bold[black]}%}"
 # 1
-RED="%{$fg[red]%}"
-BRIGHT_RED="%{$fg_no_bold[red]%}"
-BOLD_RED="%{$fg_bold[red]%}"
+RED="%{${fg[red]}%}"
+BOLD_RED="%{${fg_bold[red]}%}"
 # 2
 GREEN="%{${fg[green]}%}"
 BOLD_GREEN="%{${fg_bold[green]}%}"
@@ -33,5 +32,5 @@ CYAN="%{${fg[cyan]}%}"
 BOLD_CYAN="%{${fg_bold[cyan]}%}"
 # 7
 WHITE="%{${fg[white]}%}"
-BOLD_CYAN="%{${fg_bold[white]}%}"
+BOLD_WHITE="%{${fg_bold[white]}%}"
 
