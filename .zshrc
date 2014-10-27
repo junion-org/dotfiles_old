@@ -24,12 +24,12 @@ case ${UID} in
         ;;
     # general users
     *)
-        PROMPT="${WHITE}[${RESET}${BOLD_WHITE}%n${RESET}${RED}@${RESET}%m %B%~%b${WHITE}]%#${RESET} "
+        PROMPT="${WHITE}[${RESET}%n${RED}@${RESET}%m %B%~%b${WHITE}]%#${RESET} "
         PROMPT2="%B${WHITE}%_%#${RESET}%b "
         #SPROMPT="%B${WHITE}Do you mean ${RED}%r${WHITE}? [No(n),Yes(y),Abort(a),Edit(e)]:${RESET}%b "
         # SSH
         [ -n "${REMOTEHOST}${SSH_CONNECTION}" ] &&
-            PROMPT="${WHITE}[${RESET}${BOLD_WHITE}%n${RESET}${RED}@${RESET}${BOLD_CYAN}%m${RESET} %B%~%b${WHITE}]%#${RESET} "
+            PROMPT="${WHITE}[${RESET}%n${RED}@${RESET}${BOLD_CYAN}%m${RESET} %B%~%b${WHITE}]%#${RESET} "
         ;;
 esac
 
