@@ -20,7 +20,7 @@ case ${UID} in
         #SPROMPT="%B${RED}Do you mean %r? [No(n),Yes(y),Abort(a),Edit(e)]:${RESET}%b "
         # SSH
         [ -n "${REMOTEHOST}${SSH_CONNECTION}" ] &&
-            PROMPT="${WHITE}[${RESET}${BOLD_RED}%n${RESET}${RED}@${CYAN}%m${RESET} %B%~%b${WHITE}]%#${RESET} "
+            PROMPT="${WHITE}[${RESET}${BOLD_RED}%n${RESET}${RED}@${BOLD_CYAN}%m${RESET} %B%~%b${WHITE}]%#${RESET} "
         ;;
     # general users
     *)
@@ -29,7 +29,7 @@ case ${UID} in
         #SPROMPT="%B${WHITE}Do you mean ${RED}%r${WHITE}? [No(n),Yes(y),Abort(a),Edit(e)]:${RESET}%b "
         # SSH
         [ -n "${REMOTEHOST}${SSH_CONNECTION}" ] &&
-            PROMPT="${WHITE}[${RESET}${BOLD_WHITE}%n${RED}@${CYAN}%m${RESET} %B%~%b${WHITE}]%#${RESET} "
+            PROMPT="${WHITE}[${RESET}${BOLD_WHITE}%n${RED}@${BOLD_CYAN}%m${RESET} %B%~%b${WHITE}]%#${RESET} "
         ;;
 esac
 
