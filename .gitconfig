@@ -1,9 +1,0 @@
-[color]
-    ui = auto
-[user]
-    name = junion
-    email = junion@junion.org
-[http]
-    sslverify = false
-[core]
-	editor = /usr/local/bin/vim

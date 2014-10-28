@@ -4,10 +4,8 @@
 DOT_FILES=(
 .vim
 .vimrc
-.zsh
 .zshrc
 .tmux.conf
-.gitconfig
 .Xresources
 )
 
