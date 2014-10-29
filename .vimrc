@@ -13,6 +13,7 @@ source ~/dotfiles/.vimrc.vimfiler
 source ~/dotfiles/.vimrc.vimshell
 source ~/dotfiles/.vimrc.lightline
 source ~/dotfiles/.vimrc.indentline
+source ~/dotfiles/.vimrc.vim-quickrun
 
 " -----------------------------------------------------------------------------
 " 表示関連
